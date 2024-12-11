@@ -12,33 +12,33 @@ This project provides a web application for sentiment analysis of movie reviews.
 pip install -r requirements.txt
 ```
 
-3. Run the Flask app:
+3. Run the Streamlit app:
 
 ```bash
-python app.py
+streamlit run app.py
 ```
 
-4. Navigate to `http://127.0.0.1:5000/` in your browser to access the application.
+4. Navigate to `http://localhost:8501` in your browser to access the application.
 
 ## Files Included
 
-- `app.py`: Main Flask application file that handles routing and sentiment prediction.
-- `model.pkl`: Trained logistic regression model for sentiment classification.
-- `vectorizer.pkl`: TF-IDF vectorizer used for transforming the review text.
-- `label_encoder.pkl`: Label encoder for encoding/decoding sentiment labels.
-- `index.html`: Frontend HTML template for the web interface.
+- app.py: Main Streamlit application file that handles sentiment prediction and the frontend interface.
+- model.pkl: Trained logistic regression model for sentiment classification.
+- vectorizer.pkl: TF-IDF vectorizer used for transforming the review text.
+- label_encoder.pkl: Label encoder for encoding/decoding sentiment labels.
+
 
 ## How It Works
 
-1. The user inputs a movie review in the text box on the homepage.
-2. The review is sent to the Flask backend for sentiment prediction.
+1. The user inputs a movie review in the text box on the Streamlit app.
+2. The review is sent to the backend for sentiment prediction.
 3. The model returns the predicted sentiment (positive, negative, or neutral).
-4. The result is displayed on the page with color-coded sentiment.
+4. The result is displayed with color-coded sentiment.
 
 ## Requirements
 
 - Python 3.7 or above
-- Flask
+- Streamlit
 - scikit-learn
 - pandas
 - numpy
